@@ -1,9 +1,13 @@
 <template>
-  <h1>Teacher</h1>
+  <h1>TeacherView</h1>
+  <p>My name is : {{ name }}</p>
 </template>
 
 <script>
 export default {
   name: "TeacherView",
+  props: {
+    name: String,
+  },
 };
 </script>

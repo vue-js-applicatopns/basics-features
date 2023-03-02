@@ -1,23 +1,14 @@
 <template>
-  <LoolView />
-  <ConditionView />
-  <FormView />
-  <MainView />
+  <AboutView />
 </template>
 
 <script>
-import MainView from "./components/MainView.vue";
-import FormView from "./components/FormView";
-import ConditionView from "./components/ConditionView.vue";
-import LoolView from "./components/LoolView.vue";
+import AboutView from "./components/AboutView.vue";
 
 export default {
   name: "App",
   components: {
-    LoolView,
-    ConditionView,
-    FormView,
-    MainView,
+    AboutView,
   },
 };
 </script>
