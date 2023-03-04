@@ -1,14 +1,14 @@
 <template>
-  <AboutView />
+  <SlotView />
 </template>
 
 <script>
-import AboutView from "./components/AboutView.vue";
+import SlotView from "./components/SlotView.vue";
 
 export default {
   name: "App",
   components: {
-    AboutView,
+    SlotView,
   },
 };
 </script>

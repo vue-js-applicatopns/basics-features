@@ -1,18 +1,19 @@
 <template>
-  <h1>StudentView</h1>
-  <button @click="getUsers(userName)">get users</button>
+  <h1 v-bind="$attrs">StudentView</h1>
+  <button @click="getName(userName)">get users</button>
 </template>
 
 <script>
 export default {
   name: "StudentView",
-  props: {
-    getUsers: Function,
-  },
+  inheritAttrs: false,
   data() {
     return {
       userName: "peter",
     };
+  },
+  props: {
+    getName: Function,
   },
 };
 </script>

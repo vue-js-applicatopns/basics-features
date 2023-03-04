@@ -1,22 +1,25 @@
 <template>
   <h1>AboutView</h1>
-  <p>user name: {{ user }}</p>
-  <p>myName: {{ myName }}</p>
+  <p>My name is : {{ value }}</p>
+  <StudentView :getName="getUsers" id="handler" name="sk" />
 </template>
 
 <script>
+import StudentView from "./StudentView.vue";
+
 export default {
   name: "AboutView",
+  components: {
+    StudentView,
+  },
   date() {
     return {
-      myName: "Deepak kurmi",
+      value: "",
     };
   },
-
   methods: {
     getUsers(userName) {
-      console.log(userName);
-      this.user = userName;
+      this.value = userName;
     },
   },
 };
