@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import SlotView from "./components/SlotView.vue";
+import SlotView from "./components/Slots/SlotView.vue";
 
 export default {
   name: "App",
