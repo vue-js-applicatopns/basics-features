@@ -1,5 +1,11 @@
 <template>
-  <div class="todos"></div>
+  <div class="todos">
+    <ul>
+      <li v-for="item in items" :key="item.id">
+        <slot name="item" v-bind="item"></slot>
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
 export default {
@@ -10,9 +16,11 @@ export default {
   },
   data() {
     return {
-      Items: [],
+      items: [
+        { body: "Scoped Slots Guide", username: "Evan You", likes: 20 },
+        { body: "Vue Tutorial", username: "Natalia Tepluhina", likes: 10 },
+      ],
     };
   },
-  computed: {},
 };
 </script>

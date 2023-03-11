@@ -1,14 +1,14 @@
 <template>
-  <SlotView />
+  <LifeCycleMethod />
 </template>
 
 <script>
-import SlotView from "./components/Slots/SlotView.vue";
+import LifeCycleMethod from "./components/LifeCycleMethod";
 
 export default {
   name: "App",
   components: {
-    SlotView,
+    LifeCycleMethod,
   },
 };
 </script>
