@@ -6,7 +6,7 @@
   <button v-on:click="getConsole()">console click</button>
   <input type="text" v-model="name" />
   <p>{{ name }}</p>
-  <!-- <InfoView :info="Info" :player="player" :getConsole="getConsole" /> -->
+  <InfoView :info="Info" :player="player" :getConsole="getConsole" />
 
   <ul>
     <li v-for="item in userProfile" :key="item.id">
@@ -16,13 +16,13 @@
 </template>
 
 <script>
-// import InfoView from "./InfoView.vue";
+import InfoView from "./InfoView.vue";
 import UserView from "@/components/User.vue";
 
 export default {
   name: "MainView",
   components: {
-    // InfoView,
+    InfoView,
     UserView,
   },
   data() {
