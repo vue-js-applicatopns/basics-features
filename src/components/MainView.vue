@@ -17,7 +17,7 @@
 
 <script>
 // import InfoView from "./InfoView.vue";
-import UserView from "./User.vue";
+import UserView from "@/components/User.vue";
 
 export default {
   name: "MainView",

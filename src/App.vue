@@ -1,14 +1,13 @@
 <template>
-  <LifeCycleMethod />
+  <router-link to="/">Home</router-link><br />
+  <router-link to="/slot">Slot</router-link><br />
+  <router-link to="/profile/deepak">deepak</router-link><br />
+  <router-link to="/profile/virat">virat</router-link><br />
+  <router-view></router-view>
 </template>
 
 <script>
-import LifeCycleMethod from "./components/LifeCycleMethod";
-
 export default {
   name: "App",
-  components: {
-    LifeCycleMethod,
-  },
 };
 </script>
