@@ -6,6 +6,11 @@
       <p>email: {{ user.email }}</p>
     </li>
   </ul>
+  <button @click="show = !show">Toggle</button>
+
+  <Transition name="slide-fade">
+    <p v-if="show">hello</p>
+  </Transition>
 </template>
 
 <script>
@@ -15,10 +20,12 @@ import api from "@/api";
 
 export default {
   name: "ProfileView",
+
   data() {
     return {
       profile: "",
       users: [],
+      show: false,
     };
   },
   async mounted() {
@@ -30,3 +37,23 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.4s  cubic-bezier(1,0.5,1,1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translatey(10px);
+  opacity:0;
+}
+
+
+
+</style>
